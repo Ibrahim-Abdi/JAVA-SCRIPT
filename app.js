@@ -162,6 +162,7 @@ if(Role == "Admin"){
     console.log("000");
 }
 
+
 //Write a javascript program to precess loans based on the following senarios
 
 //1. An Application is eligible for a loan if they have a good credit score and high income 
