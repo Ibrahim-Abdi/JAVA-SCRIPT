@@ -94,5 +94,3 @@ if (age > 18) {
 } else {
     console.log("Not allowed");
 }
-
-// Re-Write switch 
