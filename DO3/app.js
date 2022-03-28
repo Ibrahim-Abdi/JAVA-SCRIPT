@@ -84,6 +84,17 @@ if (userAge < 18) {
 }
 
 let role = prompt("User role");
+if(Role == "Admin"){
+    console.log(101);
+} else if(Role == "Student"){
+    console.log(301);
+}else if(Role == "Trainer"){
+    console.log(406);
+}else if(Role == "Faculty"){
+    console.log(109);
+}else{
+    console.log("000");
+}
 
 /**------- Tasks ----------*/
 /**------- ONE ----------*/
