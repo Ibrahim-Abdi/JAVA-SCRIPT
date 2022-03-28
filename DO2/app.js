@@ -6,7 +6,7 @@ let age;
 
 //Strings
 //declaration
-let email = "barakamulumia@gmail.com";
+let email = "ibrahim10abdi@gmail.com";
 let message = "Hello, There";
 
 //concatenation  - addind strings together
@@ -46,7 +46,7 @@ console.log(sentence);
 
 let myApp = `
 <div>
-<h1>Hello i am ${firstName}</h1>
+<h1>Hello i am ibrahim</h1>
 </div>
 `;
 document.write(myApp);
