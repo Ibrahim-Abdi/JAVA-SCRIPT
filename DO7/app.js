@@ -3,7 +3,7 @@
 
 //declare an array
 
-let users = ["Jane", "John", "Jack", "Jared", "Joy"];
+let users = ["Jane", "John", "Jack", "Jared", "Jony"];
 console.log(users);
 
 //accessing an item in the array - square bracket notation
