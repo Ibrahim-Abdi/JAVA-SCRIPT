@@ -21,7 +21,7 @@ function sum(firstNumber, lastNumber) {
 
 //20 and 4 are arguments
 sum(20, 4);
-sum(4, 14);
+sum(10, 24);
 sum(70, 94);
 
 function sayHi(name) {
