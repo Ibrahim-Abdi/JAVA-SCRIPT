@@ -44,7 +44,7 @@ for(let x = 0; x <= 100; x++){
 // 4. if its divisible by neither output the number
 
 for (let x = 1; x < 100; x++){
-    if(x % 5 == 0 && x % 3 == 0){
+    if(x % 3 == 0 && x % 5 == 0){
         console.log("FizzBuzz");
     }else if( x % 5 == 0) {
         console.log("Buzz");
