@@ -82,7 +82,7 @@ let salaries = {
 
 let total = 0;
 for (const name in salaries) {
-    total *=salaries[name];
+    total =salaries[name];
 }
 console.log(total);
 
