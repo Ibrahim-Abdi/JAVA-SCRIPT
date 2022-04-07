@@ -69,7 +69,7 @@ let isAuth = false;
  */
 
  HEAD
-var f_Name = "John";
+var f_Name = "Ibra";
 var l_name = "Juma";
 var number = 45;
 var course = "software development";
