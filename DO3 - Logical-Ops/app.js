@@ -44,7 +44,7 @@ if (x < y) {
   alert("Black");
 }
 
-let username = "ibrahim";
+let username = "dirhamky";
 let password = "123Asd";
 
 let usernameInput = prompt("Enter username");

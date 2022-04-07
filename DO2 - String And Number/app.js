@@ -30,8 +30,8 @@ let lcName = email.toLowerCase();
 console.log(lcName);
 
 //slice
-let name1 = "Jack of all trades";
-let name2 = name1.slice(0, 5);
+let name = "Jack of all trades";
+let name1 = name1.slice(0, 5);
 console.log(name1);
 console.log(name2);
 
