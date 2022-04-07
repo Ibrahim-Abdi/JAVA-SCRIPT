@@ -95,4 +95,19 @@ let salaries = [
 	{ name: "Pete", amount: 450 },
 	{ name: "Ann", amount: 800 },
 	{ name: "Joy", amount: 500 },
-]
+];
+
+function sumSalaries(arr) {
+	let total = 0;
+	for (let i = 0;  i < arr.length; i++) {
+		total += arr[i].amount;
+	}
+	return total;
+}
+console.log(sumSalaries(salaries));
+
+// use reduce
+let totalSalaries = salaries.reduce( (prev, next) => {
+	return prev + next.amount;
+}, 0);
+console.log(totalSalaries);
