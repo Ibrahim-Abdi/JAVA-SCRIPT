@@ -76,12 +76,12 @@ class Clock {
 }
 
 <!-- ExtendedClock -->
-let Clock = new ExtendedClock({
+let ResolutionClock = new ExtendedClock({
     template: 'h:m:s',
     time: 1000
   });
 
-  Clock.start();
+  ResolutionClock.start();
 
 class ExtendedClock extends Clock {
   constructor(template) {
