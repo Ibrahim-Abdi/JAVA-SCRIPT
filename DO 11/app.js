@@ -36,8 +36,8 @@ let secs = currentDate.getSeconds();
     // document.write(myDate);
     amPm = "AM";
     if (hours > 12) {
-        hours -= 12;
-        am_pm = "PM";
+        hours <= 12;
+        amPm = "PM";
     }
     if(hours == 0){
         hr = 12;
@@ -45,7 +45,15 @@ let secs = currentDate.getSeconds();
     }
     let currentTime = hours + ":" + mins + ":" + secs + amPm;
 
+    let grt;
+    if (hours < 12) {
+        grt = "Good Morning"
+    } else if (hours < 17) {
+        grt = "Good Afternoon"
+    } else ("Evening");
+
     document.getElementById("time").innerHTML = currentTime;
+    document.getElementById("grt").innerHTML = currentTime;
 
 
 
