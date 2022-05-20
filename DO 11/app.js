@@ -1,70 +1,38 @@
-// The js Date Object
-function makeDate() {
-    let currentDate = new Date();
+const second = document.querySelector("#second");
+const minute = document.querySelector("#minute");
+const hour = document.querySelector("#hour");
 
-// document.write(currentDate);
+const digitalSecond = document.querySelector("#digital-second");
+const digitalMinute = document.querySelector("#digital-minute");
+const digitalHour = document.querySelector("#digital-hour");
 
-let secs = currentDate.getSeconds();
-    mins = currentDate.getMinutes(),
-    hours = currentDate.getHours(),
-    day = currentDate.getDay(),
-    date = currentDate.getDate(),
-    month = currentDate.getMonth(),
-    year = currentDate.getFullYear();
+const hand = document.querySelector(".hand");
 
-    if(secs < 10){
-        secs = `0${secs}`;
+let min = 0;
+let sec = 0;
+let h = 0;
+
+const twoDigitNum = (num) => {
+    if (num < 10) {
+        return `0${num}`;
     }
-    if(mins < 10){
-        mins = `0${mins}`;
-    }
-    if(hours < 10){
-        hours = `${hours}`;
-    }
+    return num;
+};
 
-    
+setInterval(() => {
+    const date = new Date();
+    sec = date.getSeconds() * 6;
+    if (min === 0) min = date.getMinutes() * 6;
+    min = min + 0.1;
+    if (h === 0) h = date.getHours() * 30;
+    h = h + 0.016666666666666666;
+    if (sec === 0) second.style.transition = "none";
+    else second.style.transition = ".4s all ease-in";
+    second.style.transform = `rotate(${sec}deg)`;
+    minute.style.transform = `rotate(${min}deg)`;
+    hour.style.transform = `rotate(${h}deg)`;
 
-    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    let formattedDay = days[day];
-    // console.log(formattedDay);
-
-    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-    let formattedMonth = months[month];
-    // console.log(formattedMonth);  
-
-    // let myDate = `${formattedDay} ${formattedMonth} ${dates} ${hours}:${mins}:${secs}`;
-    // document.write(myDate);
-    amPm = "AM";
-    if (hours > 12) {
-        hours <= 12;
-        amPm = "PM";
-    }
-    if(hours == 0){
-        hr = 12;
-        amPm = "AM";
-    }
-    let currentTime = hours + ":" + mins + ":" + secs + amPm;
-
-    let grt;
-    if (hours < 12) {
-        grt = "Good Morning"
-    } else if (hours < 17) {
-        grt = "Good Afternoon"
-    } else ("Evening");
-
-    document.getElementById("time").innerHTML = currentTime;
-    document.getElementById("grt").innerHTML = currentTime;
-
-
-
-    document.getElementById("day").innerHTML = formattedDay;
-    document.getElementById("date").innerHTML = date;
-    document.getElementById("month").innerHTML = formattedMonth;
-    document.getElementById("year").innerHTML = year;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("mins").innerHTML = mins;
-    document.getElementById("secs").innerHTML = secs;
-
-}
-
-setInterval(makeDate, 1000);
+    digitalHour.innerHTML = twoDigitNum(date.getHours());
+    digitalMinute.innerHTML = twoDigitNum(date.getMinutes());
+    digitalSecond.innerHTML = twoDigitNum(date.getSeconds());
+}, 1000);

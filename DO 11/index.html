@@ -4,22 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="time">
-    <p>
-        <span id="day"></span>
-        <span id="date"></span>
-        <span id="month"></span>
-        <span id="year"></span>
-    </p>
-    <div id="time"></div>
-    <p>
-        <span id="hours"></span>:<span id="mins"></span>:<span id="secs"></span>
-    </p>
-    </div>
-    <script src="app.js"></script>
+    <section>
+        <div class="clock-container">
+            <span class="num n-12">12</span>
+            <span class="num n-3">3</span>
+            <span class="num n-6">6</span>
+            <span class="num n-9">9</span>
+            <div class="clock-body">
+                <div class="hour hand" id="hour">
+                    <span></span>
+                </div>
+                <div class="minute hand" id="minute">
+                    <span></span>
+                </div>
+                <div class="second hand" id="second">
+                    <span></span>
+                </div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="digital-time">
+            <h2 id="digital-hour"></h2>
+            <span>&nbsp;:&nbsp;</span>
+            <h2 id="digital-minute"></h2>
+            <span>&nbsp;:&nbsp;</span>
+            <h2 id="digital-second"></h2>
+        </div>
+    </section>
+    <script src="./app.js"></script>
 </body>
 </html>
